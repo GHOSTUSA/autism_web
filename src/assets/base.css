@@ -1,85 +1,148 @@
 /* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-bold-italic.woff2') format('woff2'),
+    url('/fonts/geoform-bold-italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
 }
-
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-extrabold-italic.woff2') format('woff2'),
+    url('/fonts/geoform-extrabold-italic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-extralight-italic.woff2') format('woff2'),
+    url('/fonts/geoform-extralight-italic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-heavy.woff2') format('woff2'),
+    url('/fonts/geoform-heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-heavy-italic.woff2') format('woff2'),
+    url('/fonts/geoform-heavy-italic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-italic.woff2') format('woff2'),
+    url('/fonts/geoform-italic.woff') format('woff');
   font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-light.woff2') format('woff2'),
+    url('/fonts/geoform-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-light-italic.woff2') format('woff2'),
+    url('/fonts/geoform-light-italic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-medium.woff2') format('woff2'),
+    url('/fonts/geoform-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-medium-italic.woff2') format('woff2'),
+    url('/fonts/geoform-medium-italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-thin.woff2') format('woff2'),
+    url('/fonts/geoform-thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-thin-italic.woff2') format('woff2'),
+    url('/fonts/geoform-thin-italic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Geoform';
+  src:
+    url('/fonts/geoform-regular.woff2') format('woff2'),
+    url('/fonts/geoform-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+:root {
+  --pink: #ebb7b5;
+  --white: #f5f4f2;
+  --blue: #b5d2ea;
+  --dark-blue: #688196;
+  --yellow: #e9ebb5;
+}
 body {
-  min-height: 100vh;
-  color: var(--color-text);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  font-family: 'Geoform', Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 40px;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  #app {
+    gap: 80px;
+  }
 }
