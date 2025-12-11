@@ -54,7 +54,7 @@ const faqData = [
 
 <template>
   <header class="banner-header">
-    <img src="/images/logo_white.svg" alt="Logo" class="logo" />
+    <a href="/"><img src="/images/logo_white.svg" alt="Logo" class="logo" /></a>
     <CTAComponent link="/contact" text="Rejoindre la liste d’attente" />
   </header>
   <div id="app_contenu">

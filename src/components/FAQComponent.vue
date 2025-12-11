@@ -44,7 +44,6 @@ const toggleQuestion = (index: number) => {
 }
 
 .FAQ .questions {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -58,7 +57,6 @@ const toggleQuestion = (index: number) => {
   text-align: left;
   width: 100%;
   border-radius: 8px;
-  padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: var(--blue);
@@ -76,11 +74,13 @@ const toggleQuestion = (index: number) => {
   font-weight: 600;
   margin: 0;
   transition: color 0.3s ease;
+  padding: 20px;
 }
 
 .FAQ .questions .question .answer {
   margin-top: 15px;
   text-align: left;
+  padding: 20px;
 }
 
 .FAQ .questions .question .answer ul {
