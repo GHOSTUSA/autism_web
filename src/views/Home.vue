@@ -184,7 +184,6 @@ const faqData = [
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 440px;
   background-image: url('/images/family.jpg');
   background-size: cover;
   background-position: center;
@@ -202,6 +201,7 @@ const faqData = [
   width: 100%;
   max-width: 920px;
   gap: 20px;
+  margin: 10px 0;
 }
 
 .hero .contenu > * {
@@ -318,11 +318,9 @@ footer .logo-footer {
   .banner-header .logo {
     width: 90px;
   }
-  .hero {
-    height: 460px;
-  }
   .hero .contenu {
     border-radius: 24px;
+    margin: 50px 0;
   }
   .benefices {
     margin-top: 40px;
