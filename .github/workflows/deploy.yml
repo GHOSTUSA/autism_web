@@ -27,6 +27,10 @@ jobs:
     name: Build et déploiement
     runs-on: ubuntu-latest
     
+    # Limite les permissions du GITHUB_TOKEN pour la sécurité
+    permissions:
+      contents: read
+    
     steps:
       - name: Récupération du code
         uses: actions/checkout@v4
