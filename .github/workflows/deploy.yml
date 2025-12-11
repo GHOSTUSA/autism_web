@@ -1,3 +1,20 @@
+# Workflow de déploiement automatique
+#
+# Ce workflow se déclenche à chaque push sur la branche 'main' et :
+# 1. Récupère le code source
+# 2. Installe Node.js et les dépendances
+# 3. Build l'application Vue 3 (génère le dossier dist/)
+# 4. Déploie le contenu du dossier dist/ sur le serveur via SSH
+#
+# Configuration requise (Secrets GitHub) :
+# - SSH_PRIVATE_KEY : Clé privée SSH pour se connecter au serveur
+# - REMOTE_HOST : Adresse du serveur (IP ou nom de domaine)
+# - REMOTE_USER : Nom d'utilisateur SSH
+# - REMOTE_PORT : Port SSH (généralement 22)
+# - REMOTE_TARGET : Chemin du dossier de destination sur le serveur
+#
+# Documentation : voir QUICK_DEPLOY.md et DEPLOYMENT.md
+
 name: Déploiement automatique
 
 on:

@@ -116,11 +116,19 @@ npm run type-check
 
 ## 🚢 Déploiement
 
-Le projet est configuré pour un déploiement automatique via GitHub Actions. Consultez le fichier [DEPLOYMENT.md](./DEPLOYMENT.md) pour les instructions complètes de configuration.
+Le projet est configuré pour un déploiement automatique via GitHub Actions. 
 
-### Déploiement Rapide
+### 🚀 Configuration Rapide
 
-1. Configurez les secrets GitHub requis (voir [DEPLOYMENT.md](./DEPLOYMENT.md))
+Pour configurer le déploiement en 5 minutes, consultez le guide [QUICK_DEPLOY.md](./QUICK_DEPLOY.md).
+
+### 📖 Documentation Complète
+
+Pour des instructions détaillées et la configuration avancée, consultez [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Déploiement en 3 Étapes
+
+1. Configurez les secrets GitHub requis (SSH_PRIVATE_KEY, REMOTE_HOST, REMOTE_USER, REMOTE_PORT, REMOTE_TARGET)
 2. Poussez vos changements sur la branche `main`
 3. Le déploiement se fait automatiquement !
 
