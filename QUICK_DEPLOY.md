@@ -25,7 +25,8 @@ echo "COLLER_LA_CLE_ICI" >> ~/.ssh/authorized_keys
 
 ### 3️⃣ Configurer les Secrets GitHub
 
-Allez sur : `https://github.com/GHOSTUSA/autism_web/settings/secrets/actions`
+Allez sur votre repository GitHub, puis Settings > Secrets and variables > Actions
+(URL : `https://github.com/VOTRE_UTILISATEUR/VOTRE_REPO/settings/secrets/actions`)
 
 Créez ces 5 secrets :
 
@@ -57,7 +58,8 @@ git push origin main
 
 ## 📱 Vérifier le Déploiement
 
-1. Allez sur : `https://github.com/GHOSTUSA/autism_web/actions`
+1. Allez sur votre repository GitHub, onglet Actions
+   (URL : `https://github.com/VOTRE_UTILISATEUR/VOTRE_REPO/actions`)
 2. Vous verrez le workflow "Déploiement automatique" en cours
 3. Cliquez dessus pour voir les logs en temps réel
 
