@@ -29,5 +29,10 @@ export default {
 iframe {
   width: 100%;
   border: none;
+  background-color: var(--white);
+}
+
+iframe body form {
+  padding: 0;
 }
 </style>
