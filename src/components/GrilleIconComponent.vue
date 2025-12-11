@@ -44,7 +44,7 @@ export default {
 }
 .grille_icons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 20px;
 }
@@ -52,5 +52,14 @@ export default {
   text-align: center;
   font-size: 25px;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .grille_icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 15px;
+    margin-top: 40px;
+  }
 }
 </style>

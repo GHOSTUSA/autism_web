@@ -99,23 +99,20 @@ const faqData = [
     </div>
     <div class="Bloc_titre">
       <h2>Comment ça marche</h2>
-      <CTAComponent link="/contact" text="Rejoindre la liste d’attente" />
+      <CTAComponent link="/contact" text="Accéder à la liste privée" />
     </div>
     <div class="etapes">
       <div class="etape">
-        <h3>Vous vous inscrivez sur la liste d’attente</h3>
-        <p>Recevez votre invitation dès l’ouverture de la bêta privée</p>
+        <h3>Rejoignez la liste privée</h3>
+        <p>Inscrivez-vous facilement et faites partie des premiers informés.</p>
       </div>
       <div class="etape">
-        <h3>Accès anticipé</h3>
-        <p>Testez l’application en avant-première et découvrez les fonctionnalités essentielles</p>
+        <h3>Recevez des accès exclusifs</h3>
+        <p>Profitez de contenus réservés et d’aperçus privilégiés.</p>
       </div>
       <div class="etape">
-        <h3>Accompagnement personnalisé</h3>
-        <p>
-          Profitez d’une guidance adaptée, de ressources fiables et d’outils simples pour avancer
-          sereinement
-        </p>
+        <h3>Accédez en avant-première à la version bêta</h3>
+        <p>Testez l’application en avant-première et influencez son développement.</p>
       </div>
     </div>
     <div class="missions">
@@ -322,7 +319,7 @@ footer .logo-footer {
     width: 90px;
   }
   .hero {
-    height: 400px;
+    height: 460px;
   }
   .hero .contenu {
     border-radius: 24px;

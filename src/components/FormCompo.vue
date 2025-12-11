@@ -35,4 +35,7 @@ iframe {
 iframe body form {
   padding: 0;
 }
+iframe body .pas-error {
+  background-color: var(--white) !important;
+}
 </style>

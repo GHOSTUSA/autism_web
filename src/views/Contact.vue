@@ -3,6 +3,7 @@ defineOptions({
   name: 'ContactPage',
 })
 import FormCompo from '../components/FormCompo.vue'
+import GrilleIconComponent from '../components/GrilleIconComponent.vue'
 </script>
 
 <template>
@@ -12,11 +13,20 @@ import FormCompo from '../components/FormCompo.vue'
       <CTAComponent link="/contact" text="Rejoindre la liste d’attente" />
     </header>
     <div class="contact">
-      <h1>Contactez-nous</h1>
+      <h1>Bienvenue dans la communauté des parents pionniers !</h1>
       <p>
-        Vous avez des questions ou souhaitez en savoir plus sur notre application ? Remplissez le
-        formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+        Inscrivez votre email pour recevoir des mises à jour exclusives, des aperçus du produit et
+        un accès anticipé à la version bêta.
       </p>
+
+      <GrilleIconComponent
+        :data="[
+          { url: '/images/clock.svg', text: 'Accès anticipé à la version bêta' },
+          { url: '/images/tips.svg', text: 'Contenus exclusifs et conseils pratiques' },
+          { url: '/images/badge.svg', text: 'Influencez le développement de l’application' },
+        ]"
+        fonctionnalites="Pourquoi nous rejoindre ?"
+      />
       <FormCompo />
     </div>
     <footer class="footer">
