@@ -109,40 +109,63 @@
   --white: #f5f4f2;
   --blue: #b5d2ea;
   --dark-blue: #688196;
-  --yellow: #e9ebb5;
+  --yellow: #ebee99;
 }
 body {
-  max-width: 1280px;
   width: 100%;
   margin: auto;
   font-family: 'Geoform', Arial, Helvetica, sans-serif;
   background-color: var(--white);
   color: var(--dark-blue);
-  margin-bottom: 20px;
 }
 h1,
 h2,
 h3,
 p {
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 h1 {
-  font-size: 70px;
+  font-size: 30px;
 }
 
 h2 {
   font-weight: 800;
-  font-size: 40px;
+  font-size: 25px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 700;
 }
 #app {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+#app_contenu > * {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#app_contenu > .hero {
+  padding: 0;
 }
 
 @media screen and (min-width: 992px) {
-  #app {
-    gap: 80px;
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  #app_contenu {
+    padding: 0;
   }
 }

@@ -84,7 +84,7 @@ label {
 input {
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 24px;
   font-size: 1rem;
   transition: border-color 0.3s;
 }
@@ -101,7 +101,7 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 24px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;

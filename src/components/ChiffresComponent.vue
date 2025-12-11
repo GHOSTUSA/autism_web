@@ -29,12 +29,12 @@ export default {
   align-items: center;
   gap: 10px;
   background-color: var(--blue);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 24px;
 }
 
 .chiffres {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 .text {

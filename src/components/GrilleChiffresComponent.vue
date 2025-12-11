@@ -31,14 +31,32 @@ export default {
 <style scoped>
 .grille {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 20px;
-  justify-content: space-around;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  padding: 10px;
+  justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
+
 .grille > * {
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .grille {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 15px;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grille {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding: 20px;
+  }
 }
 </style>
