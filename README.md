@@ -114,6 +114,24 @@ npm run type-check
 
 - [Vue.js DevTools](https://devtools.vuejs.org/) - Outils de développement pour Vue
 
+## 🚢 Déploiement
+
+Le projet est configuré pour un déploiement automatique via GitHub Actions. 
+
+### 🚀 Configuration Rapide
+
+Pour configurer le déploiement en 5 minutes, consultez le guide [QUICK_DEPLOY.md](./QUICK_DEPLOY.md).
+
+### 📖 Documentation Complète
+
+Pour des instructions détaillées et la configuration avancée, consultez [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Déploiement en 3 Étapes
+
+1. Configurez les secrets GitHub requis (SSH_PRIVATE_KEY, REMOTE_HOST, REMOTE_USER, REMOTE_PORT, REMOTE_TARGET)
+2. Poussez vos changements sur la branche `main`
+3. Le déploiement se fait automatiquement !
+
 ## 📚 Documentation
 
 - [Vue 3](https://vuejs.org/)
@@ -121,6 +139,7 @@ npm run type-check
 - [Vue Router](https://router.vuejs.org/)
 - [Pinia](https://pinia.vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Guide de Déploiement](./DEPLOYMENT.md)
 
 ## 📄 Licence
 

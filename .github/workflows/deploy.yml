@@ -1,0 +1,65 @@
+# Workflow de déploiement automatique
+#
+# Ce workflow se déclenche à chaque push sur la branche 'main' et :
+# 1. Récupère le code source
+# 2. Installe Node.js et les dépendances
+# 3. Build l'application Vue 3 (génère le dossier dist/)
+# 4. Déploie le contenu du dossier dist/ sur le serveur via SSH
+#
+# Configuration requise (Secrets GitHub) :
+# - SSH_PRIVATE_KEY : Clé privée SSH pour se connecter au serveur
+# - REMOTE_HOST : Adresse du serveur (IP ou nom de domaine)
+# - REMOTE_USER : Nom d'utilisateur SSH
+# - REMOTE_PORT : Port SSH (généralement 22)
+# - REMOTE_TARGET : Chemin du dossier de destination sur le serveur
+#
+# Documentation : voir QUICK_DEPLOY.md et DEPLOYMENT.md
+
+name: Déploiement automatique
+
+on:
+  push:
+    branches:
+      - main  # Se déclenche à chaque push sur la branche main
+
+jobs:
+  deploy:
+    name: Build et déploiement
+    runs-on: ubuntu-latest
+    
+    # Limite les permissions du GITHUB_TOKEN pour la sécurité
+    permissions:
+      contents: read
+    
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+
+      - name: Configuration de Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      - name: Build de l'application
+        run: npm run build
+
+      - name: Déploiement sur le serveur
+        uses: easingthemes/ssh-deploy@v2.2.11
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          SOURCE: "dist/"
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/dist/, /node_modules/"
+          SCRIPT_BEFORE: |
+            whoami
+            ls -al
+          SCRIPT_AFTER: |
+            echo "Déploiement terminé avec succès!"
+            ls -al ${{ secrets.REMOTE_TARGET }}
